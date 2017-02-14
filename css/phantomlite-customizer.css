@@ -1,0 +1,23 @@
+/**
+ * Customizer Custom CSS
+ */
+.phantomlite-ads {
+  background-color: #ff6100;
+  text-align: center;
+}
+.phantomlite-ads .button {
+    background-color: #ff6100;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    color: #ffffff;
+    margin: 15px 0;
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-transition:all 0.5s ease-in-out 0s;
+    -moz-transition:all 0.5s ease-in-out 0s;
+}
+.phantomlite-ads .button:hover,
+.phantomlite-ads .button:focus
+{
+  background-color: #81d742 ;
+  color: #ffffff;
+}

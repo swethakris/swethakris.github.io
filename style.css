@@ -1,0 +1,1120 @@
+/*
+Theme Name: PhantomLite
+Theme URI: http://phantomthemes.com/downloads/phantom-lite-wordpress-theme/
+Author: phantomthemes
+Author URI: http://phantomthemes.com
+Description: Phantom lite is minimalist WordPress theme, probably the lightest theme in WordPress, Designed considering site speed in mind.It Consist of Blog Layout as well Corporate Look with Awesome Slider, Service Section, About Section, Blog Section, Portfolio Section, Testimonial Section, Counter Section and Client Section. Phantom lite has many features like multiple sidebar,list layout, grid layout specially designed for the Blog and Agency.view full demo at http://phantomthemes.com/view?theme=PhantomLite
+Version: 1.1.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: phantomlite
+Tags: two-columns,three-columns,full-width-template,sticky-post,grid-layout,custom-logo,right-sidebar,translation-ready, custom-background, theme-options,featured-images, custom-menu, threaded-comments, blog, footer-widgets
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Phantom Lite is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+  ## Links
+  ## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+  ## Posts and pages
+  ## Asides
+  ## Comments
+# Infinite scroll
+# Media
+  ## Captions
+  ## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden],
+template {
+    display: none;
+}
+a {
+    background-color: transparent;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b,
+strong {
+    font-weight: bold;
+}
+dfn {
+    font-style: italic;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+img {
+    border: 0;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 1em 40px;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+pre {
+    overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button {
+    overflow: visible;
+}
+button,
+select {
+    text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+input {
+    line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+}
+optgroup {
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,
+th {
+    padding: 0;
+}
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+    color: #404040;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+}
+p {
+    margin-bottom: 1.5em;
+}
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+blockquote {
+    margin: 0 1.5em;
+}
+address {
+    margin: 0 0 1.5em;
+}
+pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+code,
+kbd,
+tt,
+var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+abbr,
+acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+mark,
+ins {
+    background: #fff9c0;
+    text-decoration: none;
+}
+big {
+    font-size: 125%;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    
+    box-sizing: inherit;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+}
+blockquote,
+q {
+    quotes: "" "";
+}
+hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+}
+ul,
+ol {
+    margin: 0 0 1.5em 3em;
+}
+ul {
+    list-style: disc;
+}
+ol {
+    list-style: decimal;
+}
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 1.5em 1.5em;
+}
+img {
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    
+    max-width: 100%;
+    /* Adhere to container width. */
+}
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+    color: royalblue;
+}
+a:visited {
+    color: purple;
+}
+a:hover,
+a:focus,
+a:active {
+    color: midnightblue;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active {
+    outline: 0;
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+/* Do not show the outline on the skip link target. */
+
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+    margin: 0 0 1.5em;
+}
+/* Make sure select elements fit in widgets. */
+
+.widget select {
+    max-width: 100%;
+}
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+    display: block;
+}
+.hentry {
+    margin: 0 0 1.5em;
+}
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+    display: none;
+}
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+    word-wrap: break-word;
+}
+.bypostauthor {
+    display: block;
+}
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .posts-navigation,
+/* Older / Newer Posts Navigation (always hidden) */
+
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    
+    display: none;
+}
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+/* Make sure embeds and iframes fit their containers. */
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+.wp-caption-text {
+    text-align: center;
+}
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+.gallery {
+    margin-bottom: 1.5em;
+}
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+.gallery-caption {
+    display: block;
+}
+/*--------------------------------------------------------------
+## Main style starts here
+--------------------------------------------------------------*/
+
+body {
+    font: 400 14px/22px 'Droid Serif', serif;
+    color: #666;
+    margin-top: 55px;
+    background: #f7f7f7;
+}
+a,a:visited {
+    color: #0786ec;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+}
+
+
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    padding: 0 40px;
+    line-height: 40px;
+    font-family: 'PT Sans', sans-serif;
+    border-radius: 40px;
+}
+a.btn-default{border:1px solid #333;color: #333 !important;background: none !important;}
+a.btn-info{border:1px solid #fff;color: #fff;background: none;}
+
+
+img,
+input,
+.btn,
+div,
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin:0 0 20px 0;
+    font-family: 'PT Sans', sans-serif;
+}
+h1 {font-size: 3em;}
+h2 {font-size: 2.5em;}
+h3 {font-size: 2em;}
+h4{font-size: 1.5em;}
+h5,h6 {font-size: 1em;}
+
+a.readmore {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family:'PT Sans', sans-serif;
+}
+.spacer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.logged-in header .navbar-default {
+    top: 32px;
+}
+/*header*/
+
+header .logo-tag {
+    margin: 2px 0;
+}
+header .logo-tag h1 {
+    margin: 6px 0 0 0;
+    font-size: 1.5em;
+}
+header .logo-tag h1 a:hover {
+    text-decoration: none;
+}
+header .logo-tag h2 {
+    margin: 0;
+    color: #666;
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+header .logo-tag img{max-height: 50px;width: auto;}
+header .navbar-collapse {
+    padding: 0;
+}
+header .navbar-form {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+header .navbar-form .main-search {
+    position: relative;
+}
+header .navbar-form .main-search .btn .fa {
+    font-size: 1.5em;
+}
+header .navbar-form .btn {
+    background: #0786ec;
+    padding: 0 21px;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    text-shadow: none;
+    line-height: 55px;
+    border-radius: 0;
+    outline: none !important;
+}
+header .navbar-form .search-box {
+    position: absolute;
+    right: 0;
+}
+header .navbar-form .search-box .well {
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    background: #fff;
+    width: 250px;
+}
+header .navbar-form .search-box .well input {
+    border: 0;
+    border-radius: 0;
+    background: #ddd;
+    color: #000;
+    font-size: 0.8em;
+    width: 100%;
+    box-shadow: none;
+    padding: 10px;
+}
+header .navbar-form .nav {
+    margin: 0;
+}
+header .navbar-default {
+    background: #fff;
+    border: none;
+    margin: 0;
+}
+header .navbar-default .navbar-nav li a {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    line-height: 25px;
+    font-family: 'PT Sans', sans-serif;
+}
+.navbar-nav>li>.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+.navbar-right .dropdown-menu {
+    right: auto;
+    left: 0;
+    box-shadow: none;
+}
+.navbar-right .dropdown-menu .dropdown-menu {
+    left: 160px;
+    top: -2px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:focus,
+.dropdown-menu>.active>a:hover {
+    background-color: #337ab7
+}
+/*header*/
+
+.top-banner {
+    position: relative;
+}
+.top-banner img {
+    width: 100%;
+}
+.top-banner .welcome-text {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.main {
+    padding-top: 35px;
+}
+.content .gridview {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+}
+.content.front .gridview {
+    float: left;
+    width: 33.33333%;
+    padding: 0 15px;
+}
+.content.front .listview {
+    padding: 0 15%;
+}
+.content article.sticky {
+    background: #0786ec;
+    color: #fff;
+}
+.content article.sticky a {
+    color: #fff;
+}
+.content article,
+.content article {
+    height: 100%;
+    background: #fff;
+}
+.content .gridview .entry-content,
+.content .listview .entry-content {
+    padding: 30px;
+    margin: 0;
+}
+/*post*/
+
+.eq-blocks {
+    margin-bottom: 30px;
+}
+/*navigation*/
+
+.navigation.posts-navigation {
+    clear: both;
+}
+.scroll-top-wrapper {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.scroll-top-wrapper:hover {
+    opacity: 1;
+}
+
+section.footer {
+    backgroud:#fff;
+}
+.copyright {
+    background: #333;
+    padding: 15px 0;
+    color: #fff;
+}
+
+
+
+/*widget*/
+
+.widget {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff;
+}
+.widget ul,
+.widget ol {
+    margin: 0;
+    padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+/*banner*/
+.banner{position: relative;}
+.banner img.main-banner{width: 100%;}
+.banner .overlay{position: absolute;top: 0;left:0; right: 0; bottom: 0;}
+.banner .caption{position: absolute;top: 50%;width: 100%;transform: translateY(-50%);-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);transform: translateY(-50%);}
+.banner .caption .caption-info{max-width: 700px;}
+.banner.text-center .caption .caption-info{margin: 0 auto;}
+/*banners*/
+
+/*slideshow*/
+.carousel.sliders .carousel-arrow{position: absolute;z-index: 100;color: #fff;top:50%;font-size: 2em;}
+.carousel.sliders .carousel-arrow.left{left:20px;}
+.carousel.sliders .carousel-arrow.right{right:20px;}
+/*slideshow*/
+
+/*services-widgets */
+.services-widgets h4{margin-top: 20px;}
+.services-widgets p{font-size: 0.9em;}
+.services-widgets .services-list{background: #fff;padding: 30px;}
+.services-widgets .services-list:hover{box-shadow:0 0 40px #ddd;}
+/*services-widgets */
+
+/*team start*/
+.team {background: #fff;}
+.team h4{margin: 20px 0 10px 0;}
+.team p{font-size: 0.9em;}
+/*team ends*/
+
+/*portfolio*/
+.portfolio{color: #fff;background:url(images/portfolio-bg.jpg) center fixed;background-size: cover;}
+.portfolio .portfolio-list{position: relative;overflow: hidden;}
+.portfolio .portfolio-caption{display: none; position: absolute;top: -5px;left: -5px;right:-5px;bottom: -5px;background: rgba(0, 0, 0, 0.73);padding: 30px;text-align: center;}
+.portfolio .portfolio-list:hover .portfolio-caption{display: block;}
+.portfolio .owl-prev {position: absolute;top: -45px;right: 47px;}
+.portfolio .owl-next {position: absolute;top: -45px;right: 0;}
+/*portfolio*/
+
+
+
+
+/*testimonial*/
+.testimonials .testimonial-info{font-size: 0.90em;margin-bottom: 15px;line-height: 2em;font-style: italic;}
+.testimonials .client-info img{width: 70px;height: 70px;display: inline-block;}
+.testimonials .owl-dots{margin-top: 20px;}
+.testimonials .owl-dots .owl-dot{height: 8px;width: 8px;display: inline-block;background: #ccc;margin-left: 5px;border-radius: 50%;}
+.testimonials .owl-dots .owl-dot.active{background-color: #333;}
+/*testimonial*/
+
+
+.highlight-info{background: #504a92;color: #fff;}
+
+
+/*blogpost-list*/
+.blogpost-list .post-wrap{margin-bottom: 40px;}
+/*blogpost-list*/
+
+
+
+/*clients*/
+.clients-logo{background: #fff;}
+/*clients*/
+
+/*contact*/
+.contact-form textarea,.contact-form input{width: 100%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
+.contact-map{margin-bottom: 30px;}
+/*contact*/
+
+
+/*inside page*/
+.page-title {margin-bottom: 30px;}
+.page-title h1 {font-size: 2em;font-weight: 400;color: #000;border-bottom: 2px solid #F66264;display: inline-block;}
+
+
+/*wrap*/
+.full-width .entry-content{background-color: #fff;margin-bottom: 30px;}
+.entry-content{padding: 30px;margin: 0;}
+.entry-header{margin-bottom: 10px;font-size: 0.9em;}
+h1.entry-title{padding: 30px 30px 0 30px;margin: 0; }
+.has-post-thumbnail h1.entry-title,.page h1.entry-title{padding: 0;margin-bottom: 20px;}
+
+
+.comments-area {margin-top: 30px;border-top: 1px dotted #ccc;padding-top: 30px;}
+.comments-area h2 {margin-bottom: 15px;}
+.comments-area ol {margin: 0;list-style: none;}
+.comments-area ol.comment-list {padding: 0;}
+.comments-area ol.comment-list article {margin-bottom: 15px;background: #fff;padding: 15px;border-radius: 5px;}
+.comments-area footer {background: none;padding: 0;}
+.comments-area .comment-form label,
+.comments-area .comment-form input {display: block;font-weight: 300;}
+.comments-area .comment-form input,
+.comments-area .comment-form textarea {border: 1px solid #ddd;border-radius: 0;box-shadow: none;padding: 10px;width: 100%;}
+.comments-area .comment-form .form-submit input {background: #0786ec;color: #fff;text-transform: uppercase;letter-spacing: 3px;border: none;}
+/*inside page*/
+
+
+
+
+
+@media (max-width: 991px) {
+    h1 {
+        font-size: 2em;
+    }
+    header .navbar-default .navbar-nav>li>a {
+        padding: 15px 10px;
+    }
+    header .logo-tag h1 {
+        font-size: 1.25em;
+    margin-top: 10px;
+    }
+    header .logo-tag h2 {
+        font-size: 0.75em;
+    letter-spacing: 1px;
+    }
+    .theme-slider .carousel-inner .item .slide-caption .summary {
+        font-size: 1.25em;
+        line-height: 20px;
+    }
+    .welcome {
+        height: 358px;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        margin-top: 50px;
+    }
+    h3{margin: 10px 0;font-size: 1.5em;}
+    h4{font-size: 1em;}
+    header .navbar-default .navbar-nav>li>a {
+        padding: 5px 30px;
+    }
+    header .navbar-nav {
+        display: block;
+        margin-top: 0;
+    }
+    header .navbar-nav .dropdown-menu {
+        margin-left: 5px;
+        display: none !important;
+    }
+    header .navbar-nav .open .dropdown-menu {
+        display: block !important;
+    }
+    h4 {
+        margin-bottom: 10px;
+    }
+    header .logo-tag {
+        margin-left: 15px;
+    }
+    .navbar-default .navbar-toggle {
+        position: absolute;
+        right: 0;
+        background: #337ab7;
+        border: none;
+        border-radius: 0;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border: none;
+    }
+    .main-search {
+        display: none;
+    }
+    .banner .caption {
+        position: static;
+        background: #333;
+        padding: 15px 0;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .sliders .carousel-arrow {
+        display: none;
+    }
+    .banner .caption h1{font-size: 1.25em;margin-bottom:15px;}
+    .spacer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .copyright{font-size: 0.75em;padding: 10px;}
+    ul {
+        margin: 0;
+        padding-left: 15px;
+    }
+}
